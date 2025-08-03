@@ -1,8 +1,6 @@
 **[https://niteshsingh070.github.io/My-Portfolio/](https://niteshsingh070.github.io/My-Portfolio/)**
 
 ---
-
-```markdown
 # 💼 Personal Portfolio Website
 
 Welcome to my personal portfolio! This project is a showcase of my skills, projects, certifications, and experience as a developer. It's designed to give recruiters, collaborators, and fellow developers a clear view of who I am and what I can do.
@@ -69,6 +67,6 @@ My-Portfolio/
 ---
 
 ⭐️ Feel free to fork this project, contribute, or give a ⭐ if you like it!
-```
+
 
 
