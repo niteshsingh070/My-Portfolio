@@ -27,12 +27,9 @@ Welcome to my personal portfolio! This project is a showcase of my skills, proje
 
 ## 📷 Preview
 
-![Portfolio Screenshot](<img width="1889" height="868" alt="image" src="https://github.com/user-attachments/assets/4f7c48ad-fe70-42a5-bee4-1f006aa3fa4d" />
-)
+![Portfolio Screenshot](<img width="1889" height="868" alt="image" src="https://github.com/user-attachments/assets/4f7c48ad-fe70-42a5-bee4-1f006aa3fa4d" />)
 
 ## 📁 Folder Structure
-
-```
 
 My-Portfolio/
 ├─ assets/
@@ -41,8 +38,6 @@ My-Portfolio/
 ├── index.html
 ├── style.css
 └── script.js
-
-```
 
 ## 🧠 Future Enhancements
 
