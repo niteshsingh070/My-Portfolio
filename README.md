@@ -27,7 +27,7 @@ Welcome to my personal portfolio! This project is a showcase of my skills, proje
 
 ## 📷 Preview
 
-[Portfolio Screenshot](<img width="1889" height="868" alt="image" src="https://github.com/user-attachments/assets/30a47da3-0bc5-40ce-b2f6-232832aa2ff9" />)
+[Portfolio Screenshot]
 <img width="1889" height="868" alt="image" src="https://github.com/user-attachments/assets/d554ce60-5853-40db-9b02-2e6405e10cdd" />
 
 
