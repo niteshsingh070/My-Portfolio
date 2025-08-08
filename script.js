@@ -73,24 +73,44 @@ $(document).ready(function () {
     },
   });
   
-// pop up for submittion
 
-$("#contactForm").submit(function (e) {
-  e.preventDefault();
-   $(".popup-message").fadeIn(); 
+// ================== Form submit handler ==================
+$("#contact-form").submit(function (e) {
+  e.preventDefault(); // Prevent default form submission
 
-$("html, body").animate({
-    scrollTop: $("#home").offset().top
-  }, 1000);
+  // Serialize form data
+  const formData = $(this).serialize();
 
-   this.reset();
+  // Send form data using fetch (you can also use $.ajax here if needed)
+  fetch("https://formsubmit.co/ajax/YOUR_EMAIL_HERE", {
+    method: "POST",
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData
+  })
+    .then(response => {
+      if (response.ok) {
+        // Show the popup message
+        $(".thank-you-popup").fadeIn();
 
-   setTimeout(() => {
-    $(".popup-message").fadeOut(); // or .removeClass("show")
-  }, 3000);
+        // Scroll to top
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+          $(".thank-you-popup").fadeOut();
+          $("#contact-form")[0].reset(); // Reset the form
+        }, 3000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error.message);
+    });
 });
- // pop-up end
-});
+// ================== End Form submit handler ==================
+
+ });
 
 const currentYear = new Date().getFullYear();
 document.getElementById('year').textContent = currentYear;
