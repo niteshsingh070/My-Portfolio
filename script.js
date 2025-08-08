@@ -72,7 +72,24 @@ $(document).ready(function () {
       },
     },
   });
+  
+// pop up for submittion
 
+$("#contactForm").submit(function (e) {
+  e.preventDefault();
+   $(".popup-message").fadeIn(); 
+
+$("html, body").animate({
+    scrollTop: $("#home").offset().top
+  }, 1000);
+
+   this.reset();
+
+   setTimeout(() => {
+    $(".popup-message").fadeOut(); // or .removeClass("show")
+  }, 3000);
+});
+ // pop-up end
 });
 
 const currentYear = new Date().getFullYear();
