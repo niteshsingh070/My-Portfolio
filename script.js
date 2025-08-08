@@ -82,7 +82,7 @@ $("#contact-form").submit(function (e) {
   const formData = $(this).serialize();
 
   // Send form data using fetch (you can also use $.ajax here if needed)
-  fetch("https://formsubmit.co/ajax/YOUR_EMAIL_HERE", {
+  fetch("https://formsubmit.co/ajax/n2004niteshsingh4@gmail.com", {
     method: "POST",
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: formData
