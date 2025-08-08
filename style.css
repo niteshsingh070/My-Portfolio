@@ -702,7 +702,7 @@ footer span a:hover {
   text-align: center;
 }
 
-.popup-message {
+.thank-you-popup {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -710,8 +710,9 @@ footer span a:hover {
   background: #4caf50;
   color: white;
   padding: 15px 25px;
-  border-radius: 8px;
-  z-index: 9999;
-  font-weight: bold;
-  display: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  font-weight: 500;
 }
+
