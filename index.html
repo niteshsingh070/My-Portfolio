@@ -402,6 +402,21 @@ I also hope to gain valuable experience and industry exposure along the way.</p>
     <!-- External Javascript File start-->
     <script src="script.js" async></script>
     <!-- External Javascript File end-->
+    <!---Chatbot start------>
+    <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "f072887a-6824-4914-92e2-1df48e5aa5ff", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "bdcf7db9-31ae-4689-ba42-3ba695a286ee", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    <!---chatbot end-------->
 </body>
 
 </html>
