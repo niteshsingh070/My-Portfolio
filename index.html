@@ -14,6 +14,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- NEW: styles only for the new "Featured Projects" block and skill chips (does not touch existing styles) -->
+    <style>
+        .featured-title { font-size: 26px; font-weight: 600; margin: 10px 0 24px; text-align: center; }
+        .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .f-card { display: flex; flex-direction: column; padding: 26px; border-radius: 12px; border: 1px solid rgba(128,128,128,.35); background: rgba(128,128,128,.08); transition: transform .25s ease, border-color .25s ease; }
+        .f-card:hover { transform: translateY(-6px); border-color: crimson; }
+        .f-card .f-tag { font-size: 13px; font-weight: 600; color: crimson; margin-bottom: 8px; }
+        .f-card h3 { font-size: 21px; margin-bottom: 12px; }
+        .f-card ul { margin: 0 0 16px 18px; padding: 0; flex: 1; }
+        .f-card li { font-size: 15px; line-height: 1.6; margin-bottom: 6px; }
+        .f-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .f-stack span, .chip { font-size: 13px; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(128,128,128,.45); }
+        .f-link { align-self: flex-start; font-size: 15px; font-weight: 600; padding: 8px 18px; border-radius: 6px; border: 2px solid crimson; color: crimson; text-decoration: none; transition: all .25s ease; }
+        .f-link:hover { background: crimson; color: #fff; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 16px; }
+        .more-title { font-size: 22px; font-weight: 600; margin: 0 0 10px; text-align: center; }
+        @media (prefers-reduced-motion: reduce) { .f-card { transition: none; } .f-card:hover { transform: none; } }
+    </style>
 </head>
 
 <body>
@@ -122,10 +141,9 @@
                     <div class="text">I'm a Nitesh and <span class="break">I'm a <span class="typing2"></span>
                         </span>
                     </div>
-                    <p>Hi, I'm Nitesh Singh, Pursuing  B.Tech in Computer Science and Engineering at United Institute of Technology, Prayagraj.
-I’m eager to learn new skills and explore innovative ideas, constantly seeking the right opportunities.
-Passionate about coding and reading, I strive to secure a challenging role in a reputable organization where I can effectively apply my technical skills and knowledge to contribute to the company's growth.
-I also hope to gain valuable experience and industry exposure along the way.</p>
+                    <p>Hi, I'm Nitesh Singh, a Java Backend Developer with hands-on experience building Spring Boot microservices, secure REST APIs and real-time WebSocket systems. I'm completing my B.Tech in Computer Science and Engineering (CGPA 8.12/10) at United Institute of Technology, Prayagraj, in 2026.
+I work with Spring Security, Spring Data JPA, Hibernate, MySQL and MongoDB, and I've cut API response time by 20% through SQL query optimization. I've also deployed an ML-based fake news classifier with 99.7% accuracy.
+Inter-college hackathon winner and top-10 national finalist, I'm looking for a challenging backend role where I can apply my technical skills, keep learning and contribute to the company's growth.</p>
                     </a>
                 </div>
             </div>
@@ -139,15 +157,20 @@ I also hope to gain valuable experience and industry exposure along the way.</p>
             <div class="skills-content">
                 <div class="column left">
                     <div class="text"> Technical skills </div>
-                    <p> <b>Programming Languages</b> - C || JavaScript || Java || Python || Web design || MERN || DSA ...</p>
-                    <p> <b>Frameworks -</b>React.js || Express.js || Node.js...</p>
-                    <p> <b>Databases -</b> MongoDB || MySQL || SQL ...</p>
-                    <p> <b>Tools & Technologies -</b> Git || GitHub || Visual Studio Code || Postman || vercel || Netlify || Tabula || VM Virtual Box || CodesendBox || Render || streamlit || Windows || Linux ...</p>
+                    <p> <b>Programming Languages</b> - Java || Python || SQL || C || JavaScript || HTML || CSS || Web design || MERN || DSA ...</p>
+                    <p> <b>Backend -</b> Spring Boot || Spring Core || Spring Security || Spring Data JPA || Hibernate || Microservices || REST APIs || JSON || WebSockets || Java Concurrency (Multithreading) || Swagger/OpenAPI || Authentication & Authorization || RBAC ...</p>
+                    <p> <b>Frameworks -</b> React.js || Express.js || Node.js...</p>
+                    <p> <b>Databases -</b> MySQL || MongoDB || SQL || SQL Query Optimization || Indexing || Native SQL Queries ...</p>
+                    <p> <b>Machine Learning -</b> scikit-learn || TF-IDF || Linear SVM || NumPy || Streamlit ...</p>
+                    <p> <b>Tools & Technologies -</b> Git || GitHub || Maven || Postman || Apache Tomcat || Spring Tool Suite (STS) || Visual Studio Code || vercel || Netlify || Tabula || VM Virtual Box || CodesendBox || Render || Streamlit Cloud || Windows || Linux ...</p>
+                    <p> <b>Core Concepts -</b> OOP || Data Structures & Algorithms || MVC Architecture || SDLC || Agile ...</p>
                 </div>
                 <div class="column right">
                     <div class="text"> Soft skills </div>
                     <p> Leadership || Empathy || Teamwork || Problem solving || Communication || Adaptability || Critical thinking || Time management || Interpersonal ...
                     </p>
+                    <div class="text" style="margin-top:24px;"> Languages </div>
+                    <p> English (Fluent) || Hindi (Fluent)</p>
                 </div>
             </div>
         </div>
@@ -163,6 +186,9 @@ I also hope to gain valuable experience and industry exposure along the way.</p>
                    <h2><div class="text"> Achievements </div></h2>
                     <p> 
                         <ol>
+                            <li>Winner, Inter-College Hackathon 2022.</li>
+                            <li>Top 10 Finalist out of 150+ teams in a 24-hour national-level hackathon (2025).</li>
+                            <li>Letter of Appreciation from the Principal for leading the cultural event ASTITVA 2024 (2000+ attendees).</li>
                             <li>Complete 60 hrs of summer training with C Language + HTML with CSS.</li>
                             <li>Certificate of participating in Astitva - | Cultural & Tech Fest. |</li>
                             <li>Completed a comprehensive Full Stack Web Development program offered by Devtown,
@@ -174,6 +200,9 @@ I also hope to gain valuable experience and industry exposure along the way.</p>
                             <li>Course Completion Certificate for SQL Bootcamp | Lets Upgrade |</li>
                             <li>Course Completion Certificate for Foundations of Cybersecurity | Google |</li>
                             <li>Course Completion Certificate for Solutions	Architecture Job	Simulation | AWS & Forage |</li>
+                            <li>Deloitte Data Analytics Job Simulation | Forage |</li>
+                            <li>IBM Artificial Intelligence Fundamentals | IBM |</li>
+                            <li>NASSCOM Digital Application Fundamentals (STEM) | FutureSkills Prime |</li>
                             <li>For more please visit my LinkedIn</li>
                 
                         </ol> </p>
@@ -187,6 +216,71 @@ I also hope to gain valuable experience and industry exposure along the way.</p>
     <section class="projects" id="projects">
         <div class="max-width">
             <h2 class="title fadein">My Projects</h2>
+
+            <!-- NEW: Featured professional / backend projects (from resume) -->
+            <h3 class="featured-title">Featured Backend &amp; ML Projects</h3>
+            <div class="featured-grid">
+
+                <div class="f-card">
+                    <div class="f-tag">Work project | Doritech Consultancy and Software Solutions</div>
+                    <h3>Hardware Monitoring System</h3>
+                    <ul>
+                        <li>High-throughput REST microservices that ingest, process and store real-time telemetry from multiple hardware devices with sub-second latency.</li>
+                        <li>Automated real-time alert engine (Java Concurrency + WebSockets) that notifies admins of critical anomalies and threshold breaches.</li>
+                        <li>Endpoints documented with Swagger/OpenAPI and validated with Postman.</li>
+                    </ul>
+                    <div class="f-stack"><span>Java</span><span>Spring Boot</span><span>WebSockets</span><span>Concurrency</span><span>REST APIs</span></div>
+                </div>
+
+                <div class="f-card">
+                    <div class="f-tag">Work project | Doritech Consultancy and Software Solutions</div>
+                    <h3>TMS - Training Management System</h3>
+                    <ul>
+                        <li>REST APIs to create, update, retrieve and delete trainings and test assignments.</li>
+                        <li>Employee-wise and batch-wise test tracking with submission, score calculation and PASS/FAIL evaluation.</li>
+                        <li>Dynamic PDF certificates generated from PNG templates and stored in the database.</li>
+                        <li>Multiple MySQL schemas with JPA and native SQL repository queries.</li>
+                    </ul>
+                    <div class="f-stack"><span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>MySQL</span></div>
+                </div>
+
+                <div class="f-card">
+                    <div class="f-tag">Internship | DevTown, Dec 2023 - Jan 2024</div>
+                    <h3>Car Rental Management System</h3>
+                    <ul>
+                        <li>Scalable REST APIs for a car rental platform.</li>
+                        <li>Optimized SQL queries and indexing for vehicle availability search, cutting API response time by 20% in high-traffic simulations.</li>
+                    </ul>
+                    <div class="f-stack"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Hibernate</span></div>
+                    <a class="f-link" href="https://github.com/niteshsingh070/CarRentalSystem" target="_blank" rel="noreferrer">View source code</a>
+                </div>
+
+                <div class="f-card">
+                    <div class="f-tag">Personal project</div>
+                    <h3>Media Management System</h3>
+                    <ul>
+                        <li>Organizes and retrieves media assets efficiently.</li>
+                        <li>Content categorization, metadata management and secure role-based access control (RBAC) with Spring Security.</li>
+                    </ul>
+                    <div class="f-stack"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>MySQL</span></div>
+                    <!-- Add your GitHub link here: <a class="f-link" href="YOUR_LINK" target="_blank" rel="noreferrer">GitHub</a> -->
+                </div>
+
+                <div class="f-card">
+                    <div class="f-tag">Final year project</div>
+                    <h3>Fake News Detection System</h3>
+                    <ul>
+                        <li>AI web app that classifies news as Real or Fake to detect misinformation.</li>
+                        <li>Linear SVM with TF-IDF vectorization, reaching 99.7% accuracy.</li>
+                        <li>End-to-end ML pipeline: preprocessing, training, evaluation and cloud deployment.</li>
+                    </ul>
+                    <div class="f-stack"><span>Python</span><span>scikit-learn</span><span>TF-IDF</span><span>Linear SVM</span><span>Streamlit</span></div>
+                    <!-- Add your Live Demo / GitHub links here: <a class="f-link" href="YOUR_LINK" target="_blank" rel="noreferrer">Live Demo</a> -->
+                </div>
+
+            </div>
+
+            <h3 class="more-title">More Projects</h3>
             <div class="carousel owl-carousel">
 
                 <!-- <div class="card">

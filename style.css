@@ -702,17 +702,28 @@ footer span a:hover {
   text-align: center;
 }
 
-.thank-you-popup {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #4caf50;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
-  font-weight: 500;
+#thank-you-popup {
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+// card for skills
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(111, 20, 125, 0.9);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(222, 15, 15, 0.9);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  margin: 34px;
+}

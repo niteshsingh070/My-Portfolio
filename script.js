@@ -72,45 +72,27 @@ $(document).ready(function () {
       },
     },
   });
-  
 
-// ================== Form submit handler ==================
-$("#contact-form").submit(function (e) {
-  e.preventDefault(); // Prevent default form submission
+// pop up for submittion
 
-  // Serialize form data
-  const formData = $(this).serialize();
+$("#contactForm").submit(function (e) {
+  e.preventDefault();
+   $(".popup-message").fadeIn(); 
 
-  // Send form data using fetch (you can also use $.ajax here if needed)
-  fetch("https://formsubmit.co/ajax/n2004niteshsingh4@gmail.com", {
-    method: "POST",
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: formData
-  })
-    .then(response => {
-      if (response.ok) {
-        // Show the popup message
-        $(".thank-you-popup").fadeIn();
+$("html, body").animate({
+    scrollTop: $("#home").offset().top
+  }, 1000);
 
-        // Scroll to top
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+   this.reset();
 
-        // Hide popup after 3 seconds
-        setTimeout(() => {
-          $(".thank-you-popup").fadeOut();
-          $("#contact-form")[0].reset(); // Reset the form
-        }, 3000);
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    })
-    .catch(error => {
-      alert("Error: " + error.message);
-    });
+   setTimeout(() => {
+    $(".popup-message").fadeOut(); // or .removeClass("show")
+  }, 3000);
 });
-// ================== End Form submit handler ==================
+// ===== End Form Submission =====
 
- });
+
+});
 
 const currentYear = new Date().getFullYear();
 document.getElementById('year').textContent = currentYear;
